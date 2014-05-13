@@ -1179,115 +1179,21 @@ $(document).ready(function(){
         
         <div class="mosaicflow" data-item-height-calculation="attribute">
         
-        
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img1.jpg" width="240" height="230" alt="Img1"></a>
-			<p>Dessi the Dachshund</p>
-		</div>
-        
-        
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img2.jpg" width="240" height="320" alt="Img1"></a>
-			<p>Tsiri on Baltic Sea</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img3.jpg" width="240" height="159" alt="Img1"></a>
-			<p>Ciyar the Saluki</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img4.jpg" width="240"  height="238"alt="Img1"></a>
-			<p>Tsiri Having Fun by the Sea</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img5.jpg" width="240" height="357" alt="Img1"></a>
-			<p>Dessi Meets the Sea</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img6.jpg" width="240" height="159" alt="Img1"></a>
-			<p>Tsiri the Saluki</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img7.jpg" width="240" height="159" alt="Img1"></a>
-			<p>Dessi on a Waterfall</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img8.jpg" width="240" height="159" alt="Img1"></a>
-			<p>Dessi in Dandelion Field</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img9.jpg" width="240" height="159" alt="Img1"></a>
-			<p>New Year Postcard from Tsiri and Ciyar</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img10.jpg" width="240" height="358" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img11.jpg" width="240" height="156" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img12.jpg" width="240" height="359" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img13.jpg" width="240" height="359" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img14.jpg" width="240" height="352" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img15.jpg" width="240" height="179" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img16.jpg" width="240" height="234" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img17.jpg" width="240" height="144" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img11.jpg" width="240" height="156" alt="Img1"></a>
-			<p>Beautiful Afghan Hound Girl</p>
-		</div>
-        
-               
-               
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img1.jpg" width="240" height="230" alt="Img1"></a>
-			<p>Dessi the Dachshund</p>
-		</div>
-
-		<div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img2.jpg" width="240" height="320" alt="Img1"></a>
-			<p>Tsiri on Baltic Sea</p>
-		</div>
+        <?php 
 		
-        <div class="mosaicflow__item">
-			<a href="#"><img src="static/images/mosi/gallery-img8.jpg" width="240" height="159" alt="Img1"></a>
-			<p>Dessi in Dandelion Field</p>
-		</div>
+   $images = glob('./static/images/mosi/*.{jpg,png,gif}', GLOB_BRACE);
 
+
+shuffle($images);
+
+foreach($images as $image) {
+    echo '<div class="mosaicflow__item">
+			<a href="#"><img src="'.$image.'" alt="Img1"></a>			
+		</div>';
+}     
+    ?>    
+
+	
 		
 	</div>
     
@@ -1501,6 +1407,7 @@ $(document).ready(function(){
 
 
 												    <!--
+
 
 
 													<input type="checkbox" name="add_to_album" value="" id="add_to_album" class="add_to_album" style="visibility: hidden;" />
@@ -1750,7 +1657,6 @@ $(document).ready(function(){
 
 
 						    // ------------------------------------------------
-
 
 
                         ?>
